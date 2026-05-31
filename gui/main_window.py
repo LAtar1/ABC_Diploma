@@ -1,19 +1,22 @@
-from PyQt6.QtWidgets import QMainWindow, QTabWidget, QWidget, QVBoxLayout
+from PyQt6.QtWidgets import QMainWindow, QTabWidget
+from gui.tabs.tab_analytics import AnalyticsTab
+from gui.tabs.tab_products import ProductsTab
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Система оптимізації фармацевтичних запасів (ABC/XYZ)")
-        self.resize(1000, 700)  # Розмір вікна
+        self.resize(1100, 700)
 
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
-        self.tab1 = QWidget()
-        self.tab2 = QWidget()
+        self.tab_analytics = AnalyticsTab()
+        self.tab_crud = ProductsTab()
 
-        self.tabs.addTab(self.tab1, "ABC/XYZ Аналіз")
-        self.tabs.addTab(self.tab2, "Управління товарами (CRUD)")
+        self.tabs.addTab(self.tab_analytics, "ABC/XYZ аналіз")
+        self.tabs.addTab(self.tab_crud, "Управління товарами (CRUD)")
 
         self.setStyleSheet("""
             QMainWindow { background-color: #f5f6fa; }

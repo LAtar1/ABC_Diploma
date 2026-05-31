@@ -5,7 +5,6 @@ from gui.main_window import MainWindow
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    # Застосовуємо сучасний стиль
     app.setStyle("Fusion")
 
     window = MainWindow()
