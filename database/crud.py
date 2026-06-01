@@ -1,4 +1,5 @@
 import pandas as pd
+import hashlib
 from sqlalchemy import text
 from database.connection import get_engine
 
@@ -42,3 +43,34 @@ def process_sale(product_id, pharmacy_id, quantity, price):
     query = text("EXEC sp_ProcessSale @ProductID=:pid, @PharmacyID=:phid, @Quantity=:qty, @ActualPrice=:price")
     with engine.begin() as conn:
         conn.execute(query, {"pid": product_id, "phid": pharmacy_id, "qty": quantity, "price": price})
+
+
+def hash_password(password):
+    """Шифрує пароль за алгоритмом SHA-256"""
+    return hashlib.sha256(password.encode('utf-8')).hexdigest()
+
+
+def create_user(username, password, role="Фармацевт"):
+    """Реєструє нового користувача в базі даних (використовувати тільки адміну)"""
+    engine = get_engine()
+    hashed_pw = hash_password(password)
+    query = text("INSERT INTO Dim_Users (Username, PasswordHash, Role) VALUES (:user, :hash, :role)")
+    with engine.begin() as conn:
+        conn.execute(query, {"user": username, "hash": hashed_pw, "role": role})
+
+
+def verify_login(username, password):
+    """Перевіряє, чи співпадає пароль з тим, що у базі"""
+    engine = get_engine()
+    query = text("SELECT PasswordHash, Role FROM Dim_Users WHERE Username = :user")
+
+    with engine.connect() as conn:
+        result = conn.execute(query, {"user": username}).fetchone()
+
+        # Якщо користувач знайдений
+        if result:
+            stored_hash = result[0]
+            # Порівнюємо хеші
+            if stored_hash == hash_password(password):
+                return True  # Авторизація успішна
+    return False  # Неправильний логін або пароль
