@@ -67,10 +67,8 @@ def verify_login(username, password):
     with engine.connect() as conn:
         result = conn.execute(query, {"user": username}).fetchone()
 
-        # Якщо користувач знайдений
         if result:
             stored_hash = result[0]
-            # Порівнюємо хеші
             if stored_hash == hash_password(password):
-                return True  # Авторизація успішна
-    return False  # Неправильний логін або пароль
+                return True
+    return False

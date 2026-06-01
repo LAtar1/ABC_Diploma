@@ -7,7 +7,7 @@ class LoginWindow(QDialog):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Авторизація")
-        self.setFixedSize(300, 180)  # Фіксований розмір вікна
+        self.setFixedSize(300, 180)
 
         self.layout = QVBoxLayout()
         self.setLayout(self.layout)
@@ -20,7 +20,6 @@ class LoginWindow(QDialog):
         self.layout.addWidget(QLabel("Введіть пароль:"))
         self.password_input = QLineEdit()
         self.password_input.setPlaceholderText("Пароль...")
-        # РОБИМО ПАРОЛЬ ПРИХОВАНИМ (ЗІРОЧКАМИ)
         self.password_input.setEchoMode(QLineEdit.EchoMode.Password)
         self.layout.addWidget(self.password_input)
 
@@ -37,8 +36,7 @@ class LoginWindow(QDialog):
             QMessageBox.warning(self, "Помилка", "Введіть логін та пароль!")
             return
 
-        # Звертаємось до бази даних через нашу функцію
         if verify_login(user, pwd):
-            self.accept()  # Закриваємо вікно авторизації з успіхом
+            self.accept()
         else:
             QMessageBox.critical(self, "Відмова", "Неправильний логін або пароль!")
