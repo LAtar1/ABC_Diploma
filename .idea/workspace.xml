@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4171391e-dc5a-497a-b41c-fd8f5d805a6a" name="Changes" comment="gui and database">
-      <change afterPath="$PROJECT_DIR$/gui/login_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/crud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/tabs/tab_analytics.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui/tabs/tab_analytics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       <updated>1778663722880</updated>
       <workItem from="1778663723908" duration="6591000" />
       <workItem from="1779739772638" duration="9989000" />
-      <workItem from="1779829860034" duration="11921000" />
+      <workItem from="1779829860034" duration="13962000" />
     </task>
     <task id="LOCAL-00001" summary="connection to local database">
       <option name="closed" value="true" />
@@ -117,7 +114,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778664674179</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gui and database">
+      <option name="closed" value="true" />
+      <created>1780327406942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780327406942</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gui and database">
+      <option name="closed" value="true" />
+      <created>1780327509486</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780327509486</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +142,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="gui and database" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Diploma_Anisimov$main.coverage" NAME="main Coverage Results" MODIFIED="1780326996090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Diploma_Anisimov$main.coverage" NAME="main Coverage Results" MODIFIED="1780327310174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Diploma_Anisimov$connection.coverage" NAME="connection Coverage Results" MODIFIED="1779741750453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
     <SUITE FILE_PATH="coverage/Diploma_Anisimov$main_window.coverage" NAME="main_window Coverage Results" MODIFIED="1779740914782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gui" />
     <SUITE FILE_PATH="coverage/Diploma_Anisimov$crud.coverage" NAME="crud Coverage Results" MODIFIED="1779741755002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
