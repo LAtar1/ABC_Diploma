@@ -12,7 +12,6 @@ def setup_admin_if_needed():
         count = conn.execute(text("SELECT COUNT(*) FROM Dim_Users")).scalar()
         if count == 0:
             create_user("admin", "1234", "Адміністратор")
-            print("Створено базового користувача: Логін - admin, Пароль - 1234")
 
 
 if __name__ == "__main__":
